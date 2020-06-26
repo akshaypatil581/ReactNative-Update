@@ -1,28 +1,16 @@
 import React from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  SafeAreaView,
-  TouchableOpacity,
-  TouchableNativeFeedback,
-  TouchableHighlight,
-} from "react-native";
+import { StyleSheet, SafeAreaView, Button } from "react-native";
 
 export default function App() {
   const handlePress = () => console.log("Hi Akshay Hello");
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text numberOfLines={1} onPress={handlePress}>
-        Hello React
-      </Text>
-      <TouchableNativeFeedback>
-        <View
-          style={{ height: 100, width: 300, backgroundColor: "dodgerblue" }}
-        ></View>
-      </TouchableNativeFeedback>
+      <Button
+        title="Click Me"
+        color="black"
+        onPress={() => console.log("Button is clicked")}
+      />
     </SafeAreaView>
   );
 }
