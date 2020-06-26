@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { StyleSheet, Text, View, Image, SafeAreaView } from "react-native";
 
 export default function App() {
   const handlePress = () => console.log("Hi Akshay Hello");
@@ -7,10 +7,16 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <Text numberOfLines={1} onPress={handlePress}>
-        Hello Akshay! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Odit hic ex quod obcaecati cupiditate, autem asperiores commodi ab eaque
-        in minus magnam fugiat amet illum voluptatum perspiciatis ipsum.
+        Hello React
       </Text>
+      <Image
+        fadeDuration={1000}
+        source={{
+          width: 200,
+          height: 300,
+          uri: "https://picsum.photos/id/1027/200/300",
+        }}
+      />
     </SafeAreaView>
   );
 }
@@ -18,6 +24,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "dodgerblue",
+    backgroundColor: "#fff",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
