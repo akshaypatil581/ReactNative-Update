@@ -6,7 +6,11 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Hello Akshay!</Text>
+      <Text numberOfLines={1}>
+        Hello Akshay! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Odit hic ex quod obcaecati cupiditate, autem asperiores commodi ab eaque
+        in minus magnam fugiat amet illum voluptatum perspiciatis ipsum.
+      </Text>
     </SafeAreaView>
   );
 }
