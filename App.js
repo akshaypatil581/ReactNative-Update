@@ -1,5 +1,14 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, SafeAreaView } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  SafeAreaView,
+  TouchableOpacity,
+  TouchableNativeFeedback,
+  TouchableHighlight,
+} from "react-native";
 
 export default function App() {
   const handlePress = () => console.log("Hi Akshay Hello");
@@ -9,14 +18,11 @@ export default function App() {
       <Text numberOfLines={1} onPress={handlePress}>
         Hello React
       </Text>
-      <Image
-        fadeDuration={1000}
-        source={{
-          width: 200,
-          height: 300,
-          uri: "https://picsum.photos/id/1027/200/300",
-        }}
-      />
+      <TouchableNativeFeedback>
+        <View
+          style={{ height: 100, width: 300, backgroundColor: "dodgerblue" }}
+        ></View>
+      </TouchableNativeFeedback>
     </SafeAreaView>
   );
 }
@@ -29,3 +35,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
+
+{
+  /* <Image
+          fadeDuration={1000}
+          source={{
+            width: 200,
+            height: 300,
+            uri: "https://picsum.photos/id/1027/200/300",
+          }}
+        /> */
+}
