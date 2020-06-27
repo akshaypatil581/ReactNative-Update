@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, SafeAreaView, Button } from "react-native";
+import { StyleSheet, SafeAreaView, Alert, Button } from "react-native";
 
 export default function App() {
   const handlePress = () => console.log("Hi Akshay Hello");
@@ -9,7 +9,9 @@ export default function App() {
       <Button
         title="Click Me"
         color="black"
-        onPress={() => console.log("Button is clicked")}
+        onPress={() =>
+          Alert.prompt("My Title", "My Message", (text) => console.log(text))
+        }
       />
     </SafeAreaView>
   );
@@ -33,4 +35,14 @@ const styles = StyleSheet.create({
             uri: "https://picsum.photos/id/1027/200/300",
           }}
         /> */
+  //   <Button
+  //   title="Click Me"
+  //   color="black"
+  //   onPress={() =>
+  //     Alert.alert("Button Tapped", "M message", [
+  //       { text: "YES", onPress: () => console.log("YES") },
+  //       { text: "NO", onPress: () => console.log("NO") },
+  //     ])
+  //   }
+  // />
 }
